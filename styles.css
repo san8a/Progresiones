@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu" ,sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  header{
+    background: #f1f1f1;
+  }
+  
+  .inner-width{
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    margin: auto;
+  }
+  
+  .menu-icon{
+    width: 50px;
+    height: 50px;
+    background: #2c3a47;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+    position: fixed;
+    top: 10%;
+right: 10%;
+z-index: 11;
+  }
+  
+  .menu-icon:hover{
+    opacity: .9;
+    transform: scale(1.1);
+  }
+  
+  .navigation-menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3a47;
+    top: 0;
+    right: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .6s;
+    z-index: 10;
+  }
+  
+  .navigation-menu nav{
+    display: grid;
+  }
+  
+  .navigation-menu li{
+    margin: 20px 0;
+    overflow: hidden;
+  }
+  
+  .navigation-menu a{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    transform: translateY(40px);
+  }
+  
+  .navigation-menu a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 15px;
+    background: #fd7474;
+    bottom: 0;
+    left: 0;
+    border-radius: 15px;
+    z-index: -1;
+    transition: .2s linear;
+  }
+  
+  .navigation-menu a:hover::before{
+    width: 100%;
+  }
+  
+  .p{
+    max-width: 80%;
+    margin: auto;
+    padding: 40px 0;
+    font-size: 18px;
+    line-height: 1.4em;
+    text-align: justify;
+  }
+  
+  
+  .menu-icon.active{
+    background: #f1f1f1;
+    color: #2c3a47;
+  }
+  
+  .navigation-menu.active{
+    right: 0;
+  }
+  
+  .navigation-menu.active a{
+    transform: translateY(0);
+    transition: .6s linear;
+  }
+  
+  .navigation-menu.active li:nth-child(1) a{
+    transition-delay: .2s;
+  }
+  
+  .navigation-menu.active li:nth-child(2) a{
+    transition-delay: .4s;
+  }
+  
+  .navigation-menu.active li:nth-child(3) a{
+    transition-delay: .6s;
+  }
+  
+  .navigation-menu.active li:nth-child(4) a{
+    transition-delay: .8s;
+  }
+  
+  .navigation-menu.active li:nth-child(5) a{
+    transition-delay: 1s;
+  }
+.titulo{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3a47;
+   
+}
+.definicion{
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.formula{
+    position: absolute;
+    top: 42%;
+    left: 25%;
+    width: 800px;
+    height: 400px;
+}
+.definicion2{
+    position: absolute;
+    top: 87%;
+    left: 10%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.titulo2{
+    position: absolute;
+    top: 127%;
+    left: 10%;
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3a47;
+    
+}
+.ejemplo{
+    position: absolute;
+    top: 147%;
+    left: 10%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.div{
+position: absolute;
+top: 200%;
+left: 0%;
+width: 10px;
+height: 10px;
+}
+.calcu{
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    
+
+}
+.css-input {
+    padding: 12px;
+    font-size: 15px;
+    border-width: 1px;
+    border-color: #000000;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 18px;
+    box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+    text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+.css-input:focus {
+    outline:none;
+}
+.titulo2-caso1{
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3a47;
+    
+}
+.cta {
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+   }
+   
+   .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+   }
+   
+   .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+   }
+   
+   .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+   
+   .cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+   }
+   
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+   
+   .cta:active {
+    transform: scale(0.95);
+   }
+   .p{
+       position: absolute;
+       top: 30%;
+       left: 20%;
+       font-size: 30px;
+       font-family: 'Poppins', sans-serif;
+   }
+   .cssbuttons-io-button {
+    background: #234567;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #234567;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+   }
+   
+   .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #234567;
+    right: 0.3em;
+    transition: all 0.3s;
+   }
+   
+   .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+   }
+   
+   .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #234567;
+   }
+   
+   .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+   }
+   
+   .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+   }
+   .button {
+       position: absolute;
+       top: 70%;
+       left: 40%;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+   }
+   
+   .button:hover {
+    background-color: #234567;
+    box-shadow: 0px 15px 20px rgba(35, 83, 165, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+   }
+   
+   .button:active {
+    transform: translateY(-1px);
+   }

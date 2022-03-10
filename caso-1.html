@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media only screen and (max-width: 424px) {
+            .cta{
+                position: absolute;
+                top: 120%;
+                right: 10000000000000%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-icon">
+        <i class="fas fa-align-right"></i>
+      </div>
+    </div>
+  </header>
+
+  <div class="navigation-menu">
+    <nav>
+      <li><a href="caso-1.html">Caso 1</a></li>
+      <li><a href="caso-2.html">Caso 2</a></li>
+      <li><a href="caso-3.html">Caso 3</a></li>
+      <li><a href="caso-4.html">Caso 4</a></li>
+      <li><a href="test.html">Examen</a></li>
+    </nav>
+  </div>
+    <p class="titulo">
+        Caso 1
+          </p>
+          <p class="definicion">
+            En el primer caso tendremos La formula la cual es la siguiente:<br> <br>La sucesion seria el a1 y los otros numeros son sumar la diferencia cada vez<br><br> 'd'(Esta se saca restando el segundo dato con el primero)  <br><br> Ejemplo: a1=2 a2=3<br><br>Por lo tanto daria Sucesion[2,3,4,5,6,7,8...]
+          </p>
+<div class="calcu">
+          <input class="css-input" placeholder="primer numero" type="number" id="numero1"> 
+    
+          <input class="css-input" placeholder="numero 2" type="number" id="n2">
+        
+      </div>
+      </div>
+      <script> 
+      
+        function calcular(){
+          i=1;
+      sucesion=[];
+            n1= Number(numero1.value);
+            n2=Number(n2.value);
+            d=n2-n1;
+            sucesion.push(n1);
+            while(i<=5){
+              n1=n1+d;
+              sucesion.push(n1)
+            i++;    
+            }
+        
+            
+            alert("La sucesion es:"+sucesion);
+        }
+      </script>
+
+
+
+<p class="titulo2-caso1">
+    Practica
+      </p>
+
+
+      <button class="cta" onclick="calcular()" >
+        <span>Ejecutar</span>
+        <svg width="15px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </button>
+
+
+<div class="div" style="top: 150%;"></div>
+
+          <script>
+            $(".menu-icon").click(function(){
+              $(this).toggleClass("active");
+              $(".navigation-menu").toggleClass("active");
+              $(".menu-icon i").toggleClass("fa-times");
+            });
+          </script>
+</body>
+</html>

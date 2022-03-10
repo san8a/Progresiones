@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso 3</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media only screen and (max-width: 424px) {
+            .cta{
+                position: absolute;
+                top: 120%;
+                right: 10000000000000%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-icon">
+        <i class="fas fa-align-right"></i>
+      </div>
+    </div>
+  </header>
+
+  <div class="navigation-menu">
+    <nav>
+      <li><a href="caso-1.html">Caso 1</a></li>
+      <li><a href="caso-2.html">Caso 2</a></li>
+      <li><a href="caso-3.html">Caso 3</a></li>
+      <li><a href="caso-4.html">Caso 4</a></li>
+      <li><a href="test.html">Examen</a></li>
+    </nav>
+  </div>
+    <p class="titulo">
+        Caso 3
+          </p>
+          <p class="definicion">
+            En el tercer caso nos daran el 'a1'(Dato inicial) y 'ax'(Un termino cualquiera). Ejemplo<br><br> a1=-2<br> a3=6 <br> concluimos que n=3<br><br> 6=-2+(3-1)d<br>6=-2+2d<br>8=2d<br>d=4<br><br>La sucesion seria [-2,2,6,10,14...]
+          </p>
+<div class="calcu">
+         <input class="css-input" placeholder="n1 " type="number" id="necu">
+    
+      <input class="css-input" placeholder="n del numero" type="number" id="posicion">
+      <input class="css-input" placeholder="numero" type="number" id="num">
+      </div>
+      </div>
+     
+
+  
+  <script>
+  function calcular(){
+    nid=Number(posicion.value);
+     n=Number(necu.value);
+      numero=Number(num.value);
+      nid=nid-1;
+      diferencia=Number((numero-n)/nid);
+  i=0;
+  secuencia=[n];
+   if(Math.sign(nid)==-1){
+    while(i<=5){
+  n=n-diferencia;
+  secuencia.push(n);
+  i++;
+  }
+   }
+     else{
+       while(i<=5){
+  n=n+diferencia;
+  secuencia.push(n);
+  i++;
+  }
+     }
+      
+  
+  
+  
+  
+      alert("La diferencia es:"+diferencia)
+      alert("la secuencia es:" + secuencia)
+      
+      
+  }
+  </script>
+
+<p class="titulo2-caso1">
+    Practica
+      </p>
+
+
+      <button class="cta" onclick="calcular()" style="left: 70%;">
+        <span>Ejecutar</span>
+        <svg width="15px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </button>
+
+
+<div class="div" style="top: 150%;"></div>
+
+          <script>
+            $(".menu-icon").click(function(){
+              $(this).toggleClass("active");
+              $(".navigation-menu").toggleClass("active");
+              $(".menu-icon i").toggleClass("fa-times");
+            });
+          </script>
+</body>
+</html>

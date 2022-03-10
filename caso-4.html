@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso 4</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media only screen and (max-width: 424px) {
+            .cta{
+                position: absolute;
+                top: 120%;
+                right: 10000000000000%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-icon">
+        <i class="fas fa-align-right"></i>
+      </div>
+    </div>
+  </header>
+
+  <div class="navigation-menu">
+    <nav>
+      <li><a href="caso-1.html">Caso 1</a></li>
+      <li><a href="caso-2.html">Caso 2</a></li>
+      <li><a href="caso-3.html">Caso 3</a></li>
+      <li><a href="caso-4.html">Caso 4</a></li>
+      <li><a href="test.html">Examen</a></li>
+    </nav>
+  </div>
+    <p class="titulo">
+        Caso 4
+          </p>
+          <p class="definicion">
+            En el último de los caso contaremos con 'd'(Diferencia) y 'ax'(Termino cualquiera). Ejemplo<br><br> d=-2, a4=-8<br>-8=a1+(4-1)*-2<br>-2=a1<br><br>Y con estos datos podemos hacer la sucesion <br><br> [-2,-4,-6,-8,-10]
+          </p>
+         
+      
+  
+<div class="calcu">
+         
+    <input class="css-input" placeholder="diferencia" type="number" id="dife"> 
+    <input class="css-input" placeholder="posicion" type="number" id="posi">
+    <input class="css-input" placeholder="n " type="number" id="num">
+      </div>
+    
+        
+      <script>
+        function calcular(){
+            d=Number(dife.value);
+            n=Number(num.value);
+            p=Number(posi.value);
+        
+            p=p-1;
+            n1=p*d;
+        
+            if(Math.sign(n)==-1){
+              if(Math.sign(n1)==-1){
+                n1=n-n1;
+              }
+              else{
+                if(Math.sign(n1)==1){
+                n1=n1+n;
+                }
+              }
+            }
+            else{
+              if(Math.sign(n1)==-1){
+                n1=n-n1;
+              }
+              else{
+        
+                n1=n-n1;
+              }
+            }
+         
+            
+            alert("el primer numero es:"+n1)
+            i=0;
+        secuencia=[n1];
+        while(i<=5){
+        n1=n1+d;
+        secuencia.push(n1);
+        i++;
+        }
+        // if(Math.sign(d)==1){
+        //   while(i<=5){
+        // n1=n1+d;
+        // secuencia.push(n1);
+        // i++;
+        // }
+        // }
+        // else{
+        //   while(i<=5){
+        // n1=n1+d;
+        // secuencia.push(n1);
+        // i++;
+        // }
+        // }
+        
+            
+             alert("la secuencia es:" + secuencia)
+            
+            
+        }
+        </script>
+
+
+<p class="titulo2-caso1">
+    Practica
+      </p>
+
+
+      <button class="cta" onclick="calcular()" style="left: 70%;">
+        <span>Ejecutar</span>
+        <svg width="15px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </button>
+
+
+<div class="div" style="top: 150%;"></div>
+
+          <script>
+            $(".menu-icon").click(function(){
+              $(this).toggleClass("active");
+              $(".navigation-menu").toggleClass("active");
+              $(".menu-icon i").toggleClass("fa-times");
+            });
+          </script>
+</body>
+</html>

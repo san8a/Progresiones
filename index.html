@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+
+      <div class="menu-icon">
+        <i class="fas fa-align-right"></i>
+      </div>
+    </div>
+  </header>
+
+  <div class="navigation-menu">
+    <nav>
+      <li><a href="caso-1.html">Caso 1</a></li>
+      <li><a href="caso-2.html">Caso 2</a></li>
+      <li><a href="caso-3.html">Caso 3</a></li>
+      <li><a href="caso-4.html">Caso 4</a></li>
+      <li><a href="test.html">Examen</a></li>
+    </nav>
+  </div>
+
+  <p class="titulo">
+Progresiones aritmetricas
+  </p>
+  <p class="definicion">
+	Una progresión aritmética es una clase de sucesión de números reales en la que cada término se obtiene<br> sumando al anterior una cantidad fija predeterminada denominada diferencia. 
+  </p>
+  <p class="definicion2">
+	Esta es su formula general de las progresiones en donde:<br><br>An es el numero en la posicion que queremos<br><br>A1 es el primer numero de la sucesion<br> <br>N es la posicion del numero<br><br>D es la diferencia entre los numeros de la secuencia 
+  </p>
+  <p class="titulo2">
+Ejemplo
+  </p>
+  <p class="ejemplo">
+	  [1,3,5,7,9,11,13,15,17,19...]  <br><br>Esta sucesion tiene una diferencia de 2, el A1 es 1, y en la N = 5 el An es 9.
+  </p>
+  <div class="div"></div>
+<image src="progresion-aritmetica.jpg" class="formula"></image>
+  <script>
+    $(".menu-icon").click(function(){
+      $(this).toggleClass("active");
+      $(".navigation-menu").toggleClass("active");
+      $(".menu-icon i").toggleClass("fa-times");
+    });
+  </script>
+</body>
+</html>
