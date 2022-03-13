@@ -7,8 +7,45 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .input{
+      position: absolute;
+      top: 50%;
+      left: 30%;
+
+    }
+    .but{
+      position: absolute;
+      top: 50%;
+      left: 55%;
+    }
+     @media only screen and (max-width: 424px) {
+          
+          .titulo{
+           font-size: 30px;
+           left: 5%;
+          }
+          .p{
+            left: 5%;
+            font-size: 30px;
+          }
+        .input{
+          left: 0%;
+          top: 60%;
+        }
+        .cssbuttons-io-button{
+          top: 60%;
+       
+        }
+
+        .button{
+left: 25%;
+        }
+       }
+
+  </style>
 </head>
-<body onload="random()">
+<body onload="random(),mensaje()">
 
     <header>
 
@@ -27,16 +64,16 @@
         <li><a href="test.html">Examen</a></li>
       </nav>
     </div>
-   <p class="titulo">EXAMEN DE PROGRESIONES ARITMÉTICAS</p>
+   <p class="titulo">EXAMEN DE PROGRESIONES</p>
    
     <div class="p" id="pregunta"></div>
 
-    <input class="css-input" placeholder="respuesta" id="respuesta" style="position: absolute;top: 50%;left: 30%;">
+    <input class="css-input input" placeholder="respuesta" id="respuesta" >
 
     <input class="h2" id="respuestac" style="display: none;">
     
     
-    <button class="cssbuttons-io-button" onclick="revi()" style="position: absolute;top: 50%;left: 55%;"> Verificar
+    <button class="cssbuttons-io-button but" onclick="revi()" >Verificar
         <div class="icon">
           <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
         </div>
@@ -49,7 +86,9 @@
 
         
         <script>
-    
+    function mensaje(){
+      alert("Las preguntas son generadas con numeros aleatorios, por esto puede que se repitan. Solo ten paciencia y dale a obtener de nuevo. <3")
+    }
     respuesta=0;
     r=0;
     function random(){
